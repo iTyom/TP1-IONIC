@@ -11,11 +11,11 @@ import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
 export class ContactPage {
 
-      base64Image: String;
+      base64Image: string;
       constructor(public navCtrl: NavController, private camera: Camera, private base64ToGallery: Base64ToGallery) {}
 
 
-      options: CameraOptions = {
+       options: CameraOptions = {
         quality: 100,
         destinationType: this.camera.DestinationType.DATA_URL,
         encodingType: this.camera.EncodingType.JPEG,
@@ -24,6 +24,7 @@ export class ContactPage {
 
     TakePicture()
     {
+
         this.camera.getPicture(this.options).then((imageData) => {
             // imageData is either a base64 encoded string or a file URI
             // If it's base64:

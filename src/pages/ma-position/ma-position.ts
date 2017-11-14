@@ -16,16 +16,22 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 export class MaPositionPage {
 
+    location: any= {
+        latitude:'',
+        longitude:'',
+            data: {
+                latitude:'',
+                longitude:'',
+            }
+    };
 
   constructor(public navCtrl: NavController, 
                 public navParams: NavParams, 
                 private geolocation: Geolocation) {
 
       this.geolocation.getCurrentPosition().then((resp) => {
-      this.lat = resp.coords.latitude
-      this.lon = resp.coords.longitude
-      console.log(lat);
-      console.log(lon);
+      this.location.latitude = resp.coords.latitude
+      this.location.longitude = resp.coords.longitude
     }).catch((error) => {
       console.log('Error getting location', error);
     });

@@ -9,7 +9,7 @@
   <ion-list>
     <ion-item>
       <button ion-button block (click)="TakePicture()">Take picture - Press it</button>
-      <img [src]="Base64Image" *ngIf="base64Image" />
+      <img src="{{base64Image}}">
     </ion-item>
   </ion-list>
 </ion-content>
