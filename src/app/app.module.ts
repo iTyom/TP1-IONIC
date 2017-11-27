@@ -14,7 +14,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { Toast } from '@ionic-native/toast';
+import { Vibration } from '@ionic-native/vibration';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { Shake } from '@ionic-native/shake';
+import { Gyroscope, GyroscopeOrientation, GyroscopeOptions } from '@ionic-native/gyroscope';
 
 
 @NgModule({
@@ -44,6 +48,11 @@ import { Geolocation } from '@ionic-native/geolocation';
     Camera,
     Base64ToGallery,
     Geolocation,
+    Toast,
+    Vibration,
+    TextToSpeech,
+    Shake,
+    Gyroscope,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
